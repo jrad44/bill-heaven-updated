@@ -296,18 +296,16 @@ function Testimonial({
   children: React.ReactNode;
 }) {
   return (
-    <div className="rounded-2xl glass-card p-6 text-center">
+    <div className="text-center">
       <div className="text-4xl mb-3">{avatar}</div>
       <div className="flex justify-center mb-3">
         {[...Array(rating)].map((_, i) => (
           <span key={i} className="text-accent text-lg">⭐</span>
         ))}
       </div>
-      <p className="text-muted-foreground mb-4 italic">"{children}"</p>
-      <div className="border-t border-white/10 pt-4">
-        <div className="font-semibold text-foreground">{name}</div>
-        <div className="text-sm text-muted-foreground">{role}</div>
-      </div>
+      <p className="text-muted-foreground mb-4 italic text-lg leading-relaxed">"{children}"</p>
+      <div className="font-semibold text-foreground">{name}</div>
+      <div className="text-sm text-muted-foreground">{role}</div>
     </div>
   );
 }
