@@ -50,8 +50,9 @@
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
     --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
-    --gradient-bg: radial-gradient(1200px 800px at 20% 15%, rgba(118,142,255,0.22) 0%, transparent 60%),
-                   radial-gradient(900px 700px at 80% 85%, rgba(255,179,120,0.22) 0%, transparent 55%);
+    --gradient-bg: radial-gradient(1600px 1200px at 20% 15%, rgba(118,142,255,0.25) 0%, transparent 65%),
+                   radial-gradient(1400px 1000px at 80% 85%, rgba(255,179,120,0.28) 0%, transparent 70%),
+                   radial-gradient(800px 600px at 50% 50%, rgba(255,179,120,0.15) 0%, transparent 60%);
 
     /* Shadows and effects */
     --shadow-glass: 0 10px 40px rgba(0,0,0,0.25);

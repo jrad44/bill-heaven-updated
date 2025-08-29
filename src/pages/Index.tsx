@@ -198,6 +198,42 @@ const Index = () => {
             </Feature>
           </div>
         </section>
+
+        {/* Testimonials Section */}
+        <section className="mt-16">
+          <h3 className="text-center text-3xl font-bold text-foreground mb-2">
+            Trusted by Thousands
+          </h3>
+          <p className="text-center text-muted-foreground mb-12">
+            See what our users say about ResizedImage.com
+          </p>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Testimonial
+              name="Sarah Chen"
+              role="Graphic Designer"
+              avatar="👩‍🎨"
+              rating={5}
+            >
+              "This tool is incredible! I resize hundreds of images daily for my clients, and ResizedImage.com makes it so easy. The quality is always perfect."
+            </Testimonial>
+            <Testimonial
+              name="Mike Rodriguez"
+              role="E-commerce Manager"
+              avatar="👨‍💼"
+              rating={5}
+            >
+              "The batch upload feature is a game-changer. I can resize all our product images in minutes instead of hours. Worth every penny!"
+            </Testimonial>
+            <Testimonial
+              name="Emily Watson"
+              role="Blogger"
+              avatar="✍️"
+              rating={5}
+            >
+              "Simple, fast, and secure. I love that my images never leave my browser. Perfect for optimizing blog images without quality loss."
+            </Testimonial>
+          </div>
+        </section>
       </main>
 
       {/* Footer */}
@@ -241,6 +277,37 @@ function Feature({
       <div className="text-3xl mb-2">{icon}</div>
       <div className="font-semibold text-lg text-foreground mb-2">{title}</div>
       <p className="text-muted-foreground">{children}</p>
+    </div>
+  );
+}
+
+// Testimonial Component
+function Testimonial({
+  name,
+  role,
+  avatar,
+  rating,
+  children
+}: {
+  name: string;
+  role: string;
+  avatar: string;
+  rating: number;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="rounded-2xl glass-card p-6 text-center">
+      <div className="text-4xl mb-3">{avatar}</div>
+      <div className="flex justify-center mb-3">
+        {[...Array(rating)].map((_, i) => (
+          <span key={i} className="text-accent text-lg">⭐</span>
+        ))}
+      </div>
+      <p className="text-muted-foreground mb-4 italic">"{children}"</p>
+      <div className="border-t border-white/10 pt-4">
+        <div className="font-semibold text-foreground">{name}</div>
+        <div className="text-sm text-muted-foreground">{role}</div>
+      </div>
     </div>
   );
 }
